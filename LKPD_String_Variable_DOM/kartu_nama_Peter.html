@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kartu Nama Digital Interaktif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .card p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Kartu Profil</h2>
+        <p><strong>Nama:</strong> <span id="nama"></span></p>
+        <p><strong>Sekolah:</strong> <span id="sekolah"></span></p>
+        <p><strong>Kota:</strong> <span id="kota"></span></p>
+        <p><strong>Hobi:</strong> <span id="hobi"></span></p>
+        <button id="btnUbah">Ubah Hobi</button>
+    </div>
+
+    <script>
+        let nama = "Peter Maleke";
+        let sekolah = "SMKN 8 Jakarta";
+        let kota = "Jakarta";
+        let hobi = "Coding";
+
+        document.getElementById("nama").textContent = nama;
+        document.getElementById("sekolah").textContent = sekolah;
+        document.getElementById("kota").textContent = kota;
+        document.getElementById("hobi").textContent = hobi;
+
+        document.getElementById("btnUbah").addEventListener("click", function () {
+            hobi = "Depan Laptop";
+            document.getElementById("hobi").textContent = hobi;
+        });
+    </script>
+
+</body>
+
+</html>
